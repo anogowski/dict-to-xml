@@ -44,58 +44,7 @@ You can install "dict-to-xml" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-.. example-code::
-
-	.. code-block:: JSON
-	my_dict = {
-			'name': 'The Andersson\'s',
-			'size': 4,
-			'members': {
-				'total-age': 62,
-				'child': [
-					{
-						'@name': 'Tom',
-						'@sex': 'male',
-					},
-					{
-						'@name': 'Betty',
-						'@sex': 'female',
-						'grandchild': [
-							{
-								'@name': 'herbert',
-								'@sex': 'male',
-							},
-							{
-								'@name': 'lisa',
-								'@sex': 'female',
-							},
-						]
-					},
-				]
-			},
-		}
-
-	.. code-block:: python
-	xml_converter: XMLConverter = XMLConverter(my_dict, "family")
-	print(xml_converter.formatted_xml)
-
-.. example-output::
-
-	.. code-block:: xml
-
-	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<family>
-		<name>The Andersson's</name>
-		<size>4</size>
-		<members>
-			<total-age>62</total-age>
-			<child name="Tom" sex="male" />
-			<child name="Betty" sex="female">
-				<grandchild name="herbert" sex="male" />
-				<grandchild name="lisa" sex="female" />
-			</child>
-		</members>
-	</family>
+* See `examples`_
 
 Contributing
 ------------
@@ -116,6 +65,7 @@ Issues
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
 
+.. _`examples`: https://github.com/anogowski/dict-to-xml/tree/main/examples
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
 .. _`MIT`: https://opensource.org/licenses/MIT
