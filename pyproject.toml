@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 write_to = "src/dict_to_xml/version.py"
 
 [project]
+dynamic = ["version"]
 name = "dict-to-xml"
 description = "A simple dict to xml converter"
-version = "0.1.0"
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.11"
 authors = [
