@@ -6,8 +6,9 @@ write_to = "src/dict_to_xml/version.py"
 
 [project]
 dynamic = ["version"]
-name = "dict-to-xml"
+name = "data-to-xml"
 description = "A simple dict to xml converter"
+keywords = ["dict", "xml", "list", "convert", "data", "structure", "dictionary"]
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.11"
 authors = [

@@ -1,13 +1,13 @@
 ==================
-dict-to-xml
+data-to-xml
 ==================
 
-.. image:: https://img.shields.io/pypi/v/dict-to-xml.svg
-    :target: https://pypi.org/project/dict-to-xml
+.. image:: https://img.shields.io/pypi/v/data-to-xml.svg
+    :target: https://pypi.org/project/data-to-xml
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/dict-to-xml.svg
-    :target: https://pypi.org/project/dict-to-xml
+.. image:: https://img.shields.io/pypi/pyversions/data-to-xml.svg
+    :target: https://pypi.org/project/data-to-xml
     :alt: Python versions
 
 .. image:: https://github.com/anogowski/dict-to-xml/actions/workflows/publish-to-test-pypi.yml/badge.svg
@@ -24,7 +24,7 @@ This project was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cook
 Features
 --------
 
-* Convert dict to xml
+* Convert dict or list to xml
 
 
 Requirements
@@ -36,9 +36,9 @@ Requirements
 Installation
 ------------
 
-You can install "dict-to-xml" via `pip`_ from `PyPI`_::
+You can install "data-to-xml" via `pip`_ from `PyPI`_::
 
-    $ pip install dict-to-xml
+    $ pip install data-to-xml
 
 
 Usage
