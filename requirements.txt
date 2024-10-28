@@ -3,7 +3,6 @@ build==1.2.2.post1
 certifi==2024.8.30
 charset-normalizer==3.4.0
 colorama==0.4.6
--e git+https://github.com/anogowski/dict-to-xml.git@c11a96320886bee0ec92eb0eb5252531d88a6776#egg=dict_to_xml
 docutils==0.21.2
 idna==3.10
 importlib_metadata==8.5.0

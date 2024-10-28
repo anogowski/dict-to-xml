@@ -2,7 +2,7 @@
 requires = ["setuptools>=61.0.0", "wheel>=0.44.0", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
-write_to = "src/dict_to_xml/version.py"
+write_to = "src/data_to_xml/version.py"
 
 [project]
 dynamic = ["version"]
@@ -33,6 +33,6 @@ classifiers = [
 	"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
 ]
 [project.urls]
-Repository = "https://github.com/anogowski/dict-to-xml"
-[project.entry-points.dict_to_xml]
-dict-to-xml = "xml_converter"
+Repository = "https://github.com/anogowski/data-to-xml"
+[project.entry-points.data_to_xml]
+data-to-xml = "xml_converter"

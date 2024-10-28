@@ -6,7 +6,7 @@ class XMLConverter:
 
 	def __init__(self, my_dict: dict, root_node: str | None = None) -> None:
 		xml_heading: str = r'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
-		self._minified_xml: str = xml_heading + self.dict_to_xml(my_dict=my_dict, root_node=root_node)
+		self._minified_xml: str = xml_heading + self.data_to_xml(my_dict=my_dict, root_node=root_node)
 
 		element: ET.Element = ET.XML(text=self._minified_xml)
 		ET.indent(tree=element, space="\t")
@@ -21,7 +21,7 @@ class XMLConverter:
 	def formatted_xml(self) -> str:
 		return self._formatted_xml
 
-	def dict_to_xml(self, my_dict: dict | list, root_node: str | None = None) -> str:
+	def data_to_xml(self, my_dict: dict | list, root_node: str | None = None) -> str:
 		wrap: bool = False if None == root_node or isinstance(my_dict, list) else True
 		root: None | Any | Literal['objects'] = "objects" if None == root_node else root_node
 		root_singular: Any | str | None = root[:-1] if 's' == root[-1] and None == root_node else root
@@ -33,19 +33,19 @@ class XMLConverter:
 
 		if isinstance(my_dict, dict):
 			for key, value in my_dict.items():
-				if isinstance(value, dict):
-					children.append(self.dict_to_xml(my_dict=value, root_node=key))
-				elif isinstance(value, list):
-					children.append(self.dict_to_xml(my_dict=value, root_node=key))
-				elif key[0] == '@':
+				if key[0] == '@':
 					attr = f'{attr} {key[1::]} ="{str(object=value)}"'
+				elif isinstance(value, dict):
+					children.append(self.data_to_xml(my_dict=value, root_node=key))
+				elif isinstance(value, list):
+					children.append(self.data_to_xml(my_dict=value, root_node=key))
 				else:
 					xml = f'<{key}>{str(object=value)}</{key}>'
 					children.append(xml)
 
 		if isinstance(my_dict, list):
 			for value in my_dict:
-				children.append(self.dict_to_xml(my_dict=value, root_node=root_singular))
+				children.append(self.data_to_xml(my_dict=value, root_node=root_singular))
 
 		end_tag: Literal['>'] | Literal['/>'] = '>' if 0 < len(children) else '/>'
 

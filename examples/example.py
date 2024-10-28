@@ -5,7 +5,7 @@
 
 if __name__ == "__main__":
 	from typing import Any
-	from dict_to_xml.xml_converter import XMLConverter
+	from data_to_xml.xml_converter import XMLConverter
 	from pathlib import Path
 
 	my_dict: dict[str, Any] = {
