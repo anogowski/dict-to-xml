@@ -4,8 +4,10 @@ import xml.etree.ElementTree as ET
 
 class XMLConverter:
 
-	def __init__(self, my_dict: dict, root_node: str | None = None) -> None:
-		xml_heading: str = r'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+	def __init__(self, my_dict: dict, root_node: str | None = None, use_xml_header: bool = False) -> None:
+		xml_heading: str = ''
+		if use_xml_header:
+			xml_heading: str = r'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
 		self._minified_xml: str = xml_heading + self.data_to_xml(my_dict=my_dict, root_node=root_node)
 
 		element: ET.Element = ET.XML(text=self._minified_xml)
