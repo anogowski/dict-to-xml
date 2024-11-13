@@ -10,6 +10,8 @@ class XMLConverter:
 			xml_heading: str = r'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
 		self._minified_xml: str = xml_heading + self.data_to_xml(my_dict=my_dict, root_node=root_node)
 
+		# write_xml_file(xml=self._minified_xml) # For debugging
+
 		element: ET.Element = ET.XML(text=self._minified_xml)
 		ET.indent(tree=element, space="\t")
 
@@ -62,3 +64,14 @@ class XMLConverter:
 				xml = f'{xml}</{root}>'
 
 		return xml
+
+
+def write_xml_file(xml: str, f_name: str = "min.xml") -> None:
+	"""Serialize xml
+
+	Args:
+		xml (str): xml string to serialize
+		f_name (str, optional): file name. Defaults to "min.xml".
+	"""
+	with open(file=f_name, mode="w+") as f:
+		f.write(xml)
