@@ -1,7 +1,15 @@
 # CHANGELOG
 
 
+## v1.0.12 (2026-05-17)
+
+
 ## v1.0.11 (2026-05-17)
+
+### Bug Fixes
+
+- Project naming
+  ([`52d72f3`](https://github.com/anogowski/data-to-xml/commit/52d72f32c16cbfa5bfb1f0ab3b6f11837f20b49e))
 
 
 ## v1.0.10 (2026-05-17)
@@ -9,18 +17,18 @@
 ### Bug Fixes
 
 - Python-semantic-release@v9
-  ([`105808a`](https://github.com/anogowski/dict-to-xml/commit/105808a9b6d08a4484ff5c6b0ddbff7831407430))
+  ([`105808a`](https://github.com/anogowski/data-to-xml/commit/105808a9b6d08a4484ff5c6b0ddbff7831407430))
 
 - Release after tagging
-  ([`e042696`](https://github.com/anogowski/dict-to-xml/commit/e042696bd76c24031ee8102b28c7edca168fb4cd))
+  ([`e042696`](https://github.com/anogowski/data-to-xml/commit/e042696bd76c24031ee8102b28c7edca168fb4cd))
 
 - Toml and auto tag
-  ([`49a6184`](https://github.com/anogowski/dict-to-xml/commit/49a61840ec7bd7758ed1defc61b5adfec8a98907))
+  ([`49a6184`](https://github.com/anogowski/data-to-xml/commit/49a61840ec7bd7758ed1defc61b5adfec8a98907))
 
 ### Chores
 
 - Auto tag
-  ([`eaa6bbd`](https://github.com/anogowski/dict-to-xml/commit/eaa6bbdb6db986518c8ef26b30edf00f2a7ff1d1))
+  ([`eaa6bbd`](https://github.com/anogowski/data-to-xml/commit/eaa6bbdb6db986518c8ef26b30edf00f2a7ff1d1))
 
 
 ## v1.0.9 (2024-11-13)
