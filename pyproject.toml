@@ -2,11 +2,11 @@
 requires = ["setuptools>=61.0.0", "wheel>=0.44.0", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
-write_to = "src/dict_to_xml/version.py"
+write_to = "src/data_to_xml/version.py"
 
 [project]
 dynamic = ["version"]
-name = "dict-to-xml"
+name = "data-to-xml"
 description = "A simple dict to xml converter"
 keywords = [
 	"data",
@@ -17,6 +17,8 @@ keywords = [
 	"structure",
 	"convert",
 	"dictionary",
+	"dict-to-xml",
+	"dict to xml",
 ]
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.11"
@@ -38,7 +40,8 @@ classifiers = [
 	"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
 ]
 [project.urls]
-Repository = "https://github.com/anogowski/dict-to-xml"
+Repository = "https://github.com/anogowski/data-to-xml"
+Homepage = "https://pypi.org/project/data-to-xml"
 [project.entry-points.dict_to_xml]
 dict-to-xml = "xml_converter"
 

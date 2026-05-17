@@ -1,10 +1,11 @@
-site_name: dict-to-xml
+site_name: data-to-xml
 site_description: Simple python dict to xml converter
 site_author: Adam Nogowski
+site_url: https://anogowski.github.io/data-to-xml/
 
 theme: readthedocs
 
-repo_url: https://github.com/anogowski/dict-to-xml
+repo_url: https://github.com/anogowski/data-to-xml
 
 nav:
   - Home: index.md
