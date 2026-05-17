@@ -1,17 +1,17 @@
 ==================
-data-to-xml
+dict-to-xml
 ==================
 
-.. image:: https://img.shields.io/pypi/v/data-to-xml.svg
-    :target: https://pypi.org/project/data-to-xml
+.. image:: https://img.shields.io/pypi/v/dict-to-xml.svg
+    :target: https://pypi.org/project/dict-to-xml
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/data-to-xml.svg
-    :target: https://pypi.org/project/data-to-xml
+.. image:: https://img.shields.io/pypi/pyversions/dict-to-xml.svg
+    :target: https://pypi.org/project/dict-to-xml
     :alt: Python versions
 
-.. image:: https://github.com/anogowski/data-to-xml/actions/workflows/publish-to-test-pypi.yml/badge.svg
-    :target: https://github.com/anogowski/data-to-xml/actions/workflows/publish-to-test-pypi.yml
+.. image:: https://github.com/anogowski/dict-to-xml/actions/workflows/publish-to-test-pypi.yml/badge.svg
+    :target: https://github.com/anogowski/dict-to-xml/actions/workflows/publish-to-test-pypi.yml
     :alt: See Build Status on GitHub Actions
 
 A simple dict to xml converter
@@ -36,9 +36,9 @@ Requirements
 Installation
 ------------
 
-You can install "data-to-xml" via `pip`_ from `PyPI`_::
+You can install "dict-to-xml" via `pip`_ from `PyPI`_::
 
-    $ pip install data-to-xml
+    $ pip install dict-to-xml
 
 
 Usage
@@ -57,7 +57,7 @@ Dual License:
 
 Distributed under the terms of both the `BSD-3`_ AND `Mozilla Public License 2.0`_ licenses.
 
-"data-to-xml" is free and open source software
+"dict-to-xml" is free and open source software
 
 
 Issues
@@ -65,7 +65,7 @@ Issues
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
 
-.. _`examples`: https://github.com/anogowski/data-to-xml/tree/main/examples
+.. _`examples`: https://github.com/anogowski/dict-to-xml/tree/main/examples
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
 .. _`MIT`: https://opensource.org/licenses/MIT
@@ -74,7 +74,7 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 .. _`GNU GPL v3.0`: https://www.gnu.org/licenses/gpl-3.0.txt
 .. _`Apache Software License 2.0`: https://www.apache.org/licenses/LICENSE-2.0
 .. _`cookiecutter-plugin`: https://github.com/dev/cookiecutter-plugin
-.. _`file an issue`: https://github.com/anogowski/data-to-xml/issues
+.. _`file an issue`: https://github.com/anogowski/dict-to-xml/issues
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project

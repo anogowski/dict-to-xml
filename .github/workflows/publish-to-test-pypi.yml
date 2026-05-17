@@ -6,8 +6,37 @@ on:
       - "v*"
 
 jobs:
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - python-version: "3.11"
+            toxenv: "py311"
+          - python-version: "3.12"
+            toxenv: "py312"
+          - python-version: "3.13"
+            toxenv: "py313"
+
+    steps:
+      - uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@main
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install tox
+        run: python -m pip install tox
+      - name: Run tests
+        run: tox -e ${{ matrix.toxenv }}
+
   build:
     name: Build distribution 📦
+    needs:
+      - test
     runs-on: ubuntu-latest
 
     steps:
@@ -18,11 +47,8 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: "3.x"
-      - name: Install requirements
-        run: >-
-          python -m
-          pip install
-          -r requirements.txt
+      - name: Install build
+        run: python -m pip install build
       - name: Build a binary wheel and a source tarball
         run: python3 -m build
       - name: Store the distribution packages
