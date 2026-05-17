@@ -162,7 +162,7 @@ jobs:
     needs:
       - semantic-release
       - sign
-      - publish-to-pypi
+      - test
     runs-on: ubuntu-latest
     permissions:
       contents: write

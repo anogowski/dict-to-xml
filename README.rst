@@ -1,6 +1,6 @@
-==================
+==========================
 dict-to-xml / data-to-xml
-==================
+==========================
 
 .. image:: https://img.shields.io/pypi/v/data-to-xml.svg
     :target: https://pypi.org/project/data-to-xml
