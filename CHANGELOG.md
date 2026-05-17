@@ -1,7 +1,15 @@
 # CHANGELOG
 
 
+## v1.0.13 (2026-05-17)
+
+
 ## v1.0.12 (2026-05-17)
+
+### Bug Fixes
+
+- Combine workflows
+  ([`00d16f0`](https://github.com/anogowski/data-to-xml/commit/00d16f01cc7b6ba863166fc4faab27a908cd197c))
 
 
 ## v1.0.11 (2026-05-17)
