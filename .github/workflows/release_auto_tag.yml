@@ -1,13 +1,29 @@
-# .github/workflows/release.yml  (separate workflow)
+name: Auto-tag release 🏷️
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+permissions:
+  contents: write  # required to push tags and create releases
+  id-token: write  # required for trusted publishing handoff
+
 jobs:
   release:
+    name: Semantic release
     runs-on: ubuntu-latest
+    concurrency: release  # prevent parallel runs on rapid pushes
+
     steps:
       - uses: actions/checkout@main
-        with: { fetch-depth: 0 }
-      - uses: python-semantic-release/python-semantic-release@main
+        with:
+          fetch-depth: 0  # full history required for commit analysis
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions[bot]"
+          git_committer_email: "github-actions[bot]@users.noreply.github.com"

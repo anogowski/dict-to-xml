@@ -44,3 +44,16 @@ dict-to-xml = "xml_converter"
 
 [project.optional-dependencies]
 dev = ["twine", "build", "readme_renderer[rst]"]
+
+[tool.semantic_release]
+# Let setuptools_scm own the version string — PSR only creates the git tag.
+tag_format = "v{version}"
+version_toml = []
+version_variables = []
+build_command = ""        # publishing is handled by the separate publish workflow
+commit_parser = "angular" # conventional commits: feat/fix/chore/etc.
+major_on_zero = false     # feat! or BREAKING CHANGE → major bump
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
